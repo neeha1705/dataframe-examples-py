@@ -6,10 +6,6 @@ import sys
 
 if __name__ == '__main__':
 
-    os.environ["PYSPARK_SUBMIT_ARGS"] = (
-        '--packages "org.apache.hadoop:hadoop-aws:2.7.4" pyspark-shell'
-    )
-
     # Create the SparkSession
     spark = SparkSession \
         .builder \
