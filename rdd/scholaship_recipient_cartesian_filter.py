@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     join_pair_rdd.filter(lambda rec: rec[0][0] == rec[1][0])  \
         .filter(lambda rec: (rec[0][3] == "Switzerland") and (rec[1][1]) and (rec[1][2]))
-
+    print("-------------------------------------------")
     join_pair_rdd.foreach(print)
 
 # spark-submit --packages "org.apache.hadoop:hadoop-aws:2.7.4" rdd/scholaship_recipient_cartesian_filter.py
